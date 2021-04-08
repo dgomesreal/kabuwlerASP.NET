@@ -1,4 +1,3 @@
-D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.csprojAssemblyReference.cache
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.AssemblyInfoInputs.cache
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.AssemblyInfo.cs
