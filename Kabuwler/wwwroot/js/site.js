@@ -6,7 +6,7 @@
 function checkValue() {
     var valueCheck = (document.getElementById('CrawlerText').value)
     if (valueCheck == null || valueCheck == "") {
-        window.alert("Enter a Value!!!")
+        window.alert("Enter a Value!")
     } else {
         $('#load').css('display', 'none')
     }

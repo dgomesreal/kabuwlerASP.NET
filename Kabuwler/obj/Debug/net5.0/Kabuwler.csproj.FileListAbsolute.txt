@@ -41,3 +41,4 @@ D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\ref\Kabuwler.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.pdb
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.genruntimeconfig.cache
+D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.csprojAssemblyReference.cache
