@@ -14,7 +14,6 @@ namespace Kabuwler.Models
         public string ImageURL { get; set; }
         public string Comments { get; set; }
         public float Price { get; set; }
-
         public string CrawlForm { get; set; }
 
     }
