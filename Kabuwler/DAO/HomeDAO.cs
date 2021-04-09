@@ -1,18 +1,20 @@
 ﻿using Kabuwler.Infra;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Kabuwler.Models;
 
 namespace Kabuwler.DAO
 {
     public class HomeDAO
     {
-        public KabuwlerContext _context { get; set; }
+        public KabuwlerContext context { get; set; }
 
         public HomeDAO(KabuwlerContext context)
         {
-            _context = context;
+            this.context = context;
         }
+        public void ProductAdd(Product add)
+        {
+            context.Products.Add(add);
+            context.SaveChanges();
+        } 
     }
 }

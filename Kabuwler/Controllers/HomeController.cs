@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
+using Kabuwler.DAO;
+using Kabuwler.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,16 +10,22 @@ namespace Kabuwler.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private HomeDAO dao;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(HomeDAO dao)
         {
-            _logger = logger;
+            this.dao = dao;
+        }
+        public IActionResult Index()
+        {            
+            return View();
         }
 
-        public IActionResult Index()
+        [HttpPost]
+        public IActionResult ProductAdd(Product product)
         {
-            return View();
+            dao.ProductAdd(product);
+            return RedirectToAction("Index");
         }
 
         private static async Task StartCrawlerAsync()
