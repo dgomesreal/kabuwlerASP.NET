@@ -22,7 +22,3 @@
                       Lines="@(EFProjectMetadata)" />
   </Target>
 </Project>
-File)"
-                      Lines="@(EFProjectMetadata)" />
-  </Target>
-</Project>
