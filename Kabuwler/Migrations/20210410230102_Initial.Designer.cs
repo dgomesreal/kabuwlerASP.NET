@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kabuwler.Migrations
 {
     [DbContext(typeof(KabuwlerContext))]
-    [Migration("20210409172158_Inicial")]
-    partial class Inicial
+    [Migration("20210410230102_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,12 +22,15 @@ namespace Kabuwler.Migrations
 
             modelBuilder.Entity("Kabuwler.Models.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Comments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CrawlForm")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -36,13 +39,13 @@ namespace Kabuwler.Migrations
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Price")
-                        .HasColumnType("real");
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductID");
 
                     b.ToTable("Products");
                 });

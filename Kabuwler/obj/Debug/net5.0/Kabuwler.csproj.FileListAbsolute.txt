@@ -56,7 +56,6 @@ D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\bin\Debug\net5.0\runtimes\unix\lib\
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.csprojAssemblyReference.cache
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.AssemblyInfoInputs.cache
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.AssemblyInfo.cs
@@ -85,3 +84,4 @@ D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\ref\Kabuwler.dll
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.pdb
 D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.genruntimeconfig.cache
+D:\Projetos\KabuwlerASPNET\Kabuwler\Kabuwler\obj\Debug\net5.0\Kabuwler.csprojAssemblyReference.cache

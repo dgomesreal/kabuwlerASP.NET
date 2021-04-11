@@ -2,6 +2,7 @@
 using Kabuwler.DAO;
 using Kabuwler.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -16,19 +17,7 @@ namespace Kabuwler.Controllers
         {
             this.dao = dao;
         }
-        public IActionResult Index()
-        {            
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult ProductAdd(Product product)
-        {
-            dao.ProductAdd(product);
-            return RedirectToAction("Index");
-        }
-
-        private static async Task StartCrawlerAsync()
+        public async Task<IActionResult> Index(Product product)
         {
             var url = "https://www.kabum.com.br/";
 
@@ -42,12 +31,24 @@ namespace Kabuwler.Controllers
                         .Where(node => node.GetAttributeValue("Id", "")
                         .Equals("pag-detalhes")).ToList();
 
+            var productsList = new List<Product>();
+
             foreach(var div in divs)
             {
-                var title =  div.Descendants("h1").FirstOrDefault().InnerText;
-                var description = div.Descendants("div").Where(div => div.GetAttributeValue("class", "").Equals("content_tab")).FirstOrDefault().InnerText;
+                var productItem = new Product
+                {
+                    Title = div?.Descendants("h1")?.FirstOrDefault()?.InnerText,
+                    Description = div?.Descendants("div")?.FirstOrDefault()?.InnerText,
+                    Price = div?.Descendants("div")?.FirstOrDefault()?.InnerHtml,
+                    ImageURL = div?.Descendants("img")?.FirstOrDefault()?.ChildAttributes("src")?.FirstOrDefault()?.Value,
+                    Comments = div?.Descendants("div")?.FirstOrDefault()?.InnerText
+                };
 
+                productsList.Add(productItem);
+                dao.AddProducts(productItem);
             }
+            List<Product> list = dao.List();
+            return View(list);
         }
     }
 }

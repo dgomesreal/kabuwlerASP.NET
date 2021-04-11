@@ -1,5 +1,7 @@
 ﻿using Kabuwler.Infra;
 using Kabuwler.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Kabuwler.DAO
 {
@@ -11,10 +13,15 @@ namespace Kabuwler.DAO
         {
             this.context = context;
         }
-        public void ProductAdd(Product add)
+        public void AddProducts(Product product)
         {
-            context.Products.Add(add);
+            context.Products.Add(product);
             context.SaveChanges();
-        } 
+        }
+        public List<Product> List()
+        {
+            var lista = context.Products.ToList();
+            return lista;
+        }
     }
 }
