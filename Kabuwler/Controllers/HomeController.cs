@@ -17,7 +17,12 @@ namespace Kabuwler.Controllers
         {
             this.dao = dao;
         }
-        public async Task<IActionResult> Index(Product product)
+
+        public ActionResult Index(Product product)
+        {
+            return View();
+        }
+        public async Task<ActionResult> ShowProducts(Product p)
         {
             var url = "https://www.kabum.com.br/";
 
@@ -33,7 +38,7 @@ namespace Kabuwler.Controllers
 
             var productsList = new List<Product>();
 
-            foreach(var div in divs)
+            foreach (var div in divs)
             {
                 var productItem = new Product
                 {
@@ -47,8 +52,10 @@ namespace Kabuwler.Controllers
                 productsList.Add(productItem);
                 dao.AddProducts(productItem);
             }
+
             List<Product> list = dao.List();
-            return View(list);
+
+            return View("Result", list);
         }
     }
 }
