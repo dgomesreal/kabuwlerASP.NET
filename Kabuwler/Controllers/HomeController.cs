@@ -13,47 +13,51 @@ namespace Kabuwler.Controllers
     {
         private HomeDAO dao;
 
+        private static List<Product> list;
         public HomeController(HomeDAO dao)
         {
             this.dao = dao;
         }
 
-        public ActionResult Index(Product product)
+        public ActionResult Index()
         {
             return View();
         }
+
         public async Task<ActionResult> ShowProducts(Product p)
         {
-            var url = "https://www.kabum.com.br/";
-
+            //Get thread
+            var url = @"https://www.kabum.com.br/"; 
             var httpClient = new HttpClient();
             var html = await httpClient.GetStringAsync(url);
 
+
+            //Html Parser
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
             var divs = htmlDocument.DocumentNode.Descendants("div")
-                        .Where(node => node.GetAttributeValue("Id", "")
-                        .Equals("pag-detalhes")).ToList();
-
-            var productsList = new List<Product>();
+                        .Where(node => node.GetAttributeValue("class", "")
+                        .Equals("versions-item")).ToList();
 
             foreach (var div in divs)
             {
                 var productItem = new Product
                 {
-                    Title = div?.Descendants("h1")?.FirstOrDefault()?.InnerText,
+                    Title = div?.Descendants("h2")?.FirstOrDefault()?.InnerText,
                     Description = div?.Descendants("div")?.FirstOrDefault()?.InnerText,
-                    Price = div?.Descendants("div")?.FirstOrDefault()?.InnerHtml,
+                    Price = div?.Descendants("div")?.FirstOrDefault()?.InnerText,
                     ImageURL = div?.Descendants("img")?.FirstOrDefault()?.ChildAttributes("src")?.FirstOrDefault()?.Value,
                     Comments = div?.Descendants("div")?.FirstOrDefault()?.InnerText
                 };
 
-                productsList.Add(productItem);
-                dao.AddProducts(productItem);
+                list.Add(productItem);
+                
             }
 
-            List<Product> list = dao.List();
+            dao.AddProducts(p);
+
+            list = dao.List();
 
             return View("Result", list);
         }

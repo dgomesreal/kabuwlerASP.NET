@@ -1,10 +1,10 @@
-@model List<Product>
+@model Product
 
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Kabuwler</h1>
         <br />
-        <form asp-controller="Home" asp-action="ShowProducts" method="post">
+        <form asp-controller="Home" asp-action="ShowProducts">
             <p>
                 <input id="CrawlerText" type="text">
                 <button class="btn btn-danger" onclick="checkValue()">Crawl</button>
