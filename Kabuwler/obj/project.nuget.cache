@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/xx9mlVBQ9xfC8l2TKSzpUCZkOtOUVnqSs2dC6Nhc/9wieG+IGFniCtM1NCR8WEoDoaX63AeswvB5C4KWi/xbA==",
+  "dgSpecHash": "7Czk8KkI+a1kPOWoCsf8nVfOSIiooJEa+M9RpDmHUd/zXqi0Ti/kGsgTDgwijE+qGTpIZTuBmvb9R98abqcm8Q==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
+  "projectFilePath": "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dgome\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\dgome\\.nuget\\packages\\htmlagilitypack\\1.11.32\\htmlagilitypack.1.11.32.nupkg.sha512",

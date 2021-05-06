@@ -1,0 +1,7 @@
+1- Index.html com formulario
+2- Controller pega resposta do formulario
+3- Controller usa HtmlAgilityPack para fazer pesquisa Tipo Crawler,leitura e extração 
+no site Kabum(titulo,Descricao,Preço,foto,5 comentarios)
+4- Controller Salva extração no Banco
+5- Controller devolve lista para o Index.html e mostra ao usuario 
+6- Se usuario clicar em um item mostra 5 comentarios do produto se houver

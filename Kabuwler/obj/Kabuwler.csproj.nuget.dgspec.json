@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj": {}
+    "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj": {
+    "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
+        "projectUniqueName": "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
         "projectName": "Kabuwler",
-        "projectPath": "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
+        "projectPath": "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\Kabuwler.csproj",
         "packagesPath": "C:\\Users\\dgome\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\obj\\",
+        "outputPath": "D:\\Projects\\KabuwlerASPNET\\Kabuwler\\Kabuwler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dgome\\AppData\\Roaming\\NuGet\\NuGet.Config",
